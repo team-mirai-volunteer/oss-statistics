@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Mirai Volunteer - OSS統計ダッシュボード</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Team Mirai Volunteer OSS統計ダッシュボード</h1>
+            <p class="subtitle">開発祭り盛り上げ企画！みんなの貢献を可視化しよう！</p>
+        </header>
+
+        {% if stats %}
+        <div class="stats-overview">
+            <div class="stat-card">
+                <h3>📚 総リポジトリ数</h3>
+                <div class="stat-number">{{ stats.total_repos }}</div>
+            </div>
+            <div class="stat-card">
+                <h3>💻 総コミット数</h3>
+                <div class="stat-number">{{ stats.repositories | sum(attribute='commits') }}</div>
+            </div>
+            <div class="stat-card">
+                <h3>🔄 総PR数</h3>
+                <div class="stat-number">{{ stats.repositories | sum(attribute='prs') }}</div>
+            </div>
+            <div class="stat-card">
+                <h3>👥 総貢献者数</h3>
+                <div class="stat-number">{{ stats.repositories | sum(attribute='contributors') }}</div>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <div class="chart-container">
+                <h3>📊 リポジトリ別統計</h3>
+                <canvas id="repoChart"></canvas>
+            </div>
+        </div>
+
+        <div class="repos-section">
+            <h3>📋 リポジトリ詳細</h3>
+            <div class="repos-grid">
+                {% for repo in stats.repositories %}
+                <div class="repo-card">
+                    <h4>{{ repo.name }}</h4>
+                    {% if repo.description %}
+                    <p class="repo-description">{{ repo.description }}</p>
+                    {% endif %}
+                    <div class="repo-stats">
+                        <span class="stat-item">💻 {{ repo.commits }} commits</span>
+                        <span class="stat-item">🔄 {{ repo.prs }} PRs</span>
+                        <span class="stat-item">👥 {{ repo.contributors }} contributors</span>
+                    </div>
+                    {% if repo.error %}
+                    <div class="error">エラー: {{ repo.error }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="update-info">
+            <p>最終更新: {{ stats.collected_at }}</p>
+            <button onclick="refreshData()" class="refresh-btn">🔄 データ更新</button>
+        </div>
+
+        {% else %}
+        <div class="no-data">
+            <h3>📊 データがありません</h3>
+            <p>統計データを収集してください。</p>
+            <button onclick="refreshData()" class="refresh-btn">📊 データ収集開始</button>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    
+    {% if stats %}
+    <script>
+        // チャートデータの準備
+        const repoData = {{ stats.repositories | tojson }};
+        
+        // リポジトリ別統計チャート
+        const ctx = document.getElementById('repoChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: repoData.map(repo => repo.name),
+                datasets: [
+                    {
+                        label: 'コミット数',
+                        data: repoData.map(repo => repo.commits),
+                        backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'PR数',
+                        data: repoData.map(repo => repo.prs),
+                        backgroundColor: 'rgba(255, 99, 132, 0.8)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '貢献者数',
+                        data: repoData.map(repo => repo.contributors),
+                        backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'リポジトリ別活動統計'
+                    }
+                }
+            }
+        });
+    </script>
+    {% endif %}
+</body>
+</html>

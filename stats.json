@@ -1,0 +1,137 @@
+{
+  "organization": "team-mirai-volunteer",
+  "collected_at": "2025-06-07T16:42:29.475134",
+  "total_repos": 13,
+  "repositories": [
+    {
+      "name": "action-board",
+      "commits": 1,
+      "prs": 100,
+      "contributors": 19,
+      "error": null,
+      "description": "ゲーミフィケーション",
+      "created_at": "2025-05-10T08:39:38Z",
+      "updated_at": "2025-06-07T14:50:33Z"
+    },
+    {
+      "name": "fact-checker",
+      "commits": 1,
+      "prs": 10,
+      "contributors": 9,
+      "error": null,
+      "description": null,
+      "created_at": "2025-05-23T06:47:29Z",
+      "updated_at": "2025-06-07T14:17:02Z"
+    },
+    {
+      "name": "project_template",
+      "commits": 1,
+      "prs": 1,
+      "contributors": 2,
+      "error": null,
+      "description": "新規プロジェクトを作る際の参考用です",
+      "created_at": "2025-05-27T09:34:29Z",
+      "updated_at": "2025-05-27T12:36:46Z"
+    },
+    {
+      "name": "pr_analysis",
+      "commits": 1,
+      "prs": 4,
+      "contributors": 2,
+      "error": null,
+      "description": null,
+      "created_at": "2025-05-27T14:48:07Z",
+      "updated_at": "2025-05-28T11:01:30Z"
+    },
+    {
+      "name": "pr-data",
+      "commits": 1,
+      "prs": 2,
+      "contributors": 3,
+      "error": null,
+      "description": null,
+      "created_at": "2025-05-27T14:49:29Z",
+      "updated_at": "2025-06-07T03:44:38Z"
+    },
+    {
+      "name": "youtube",
+      "commits": 1,
+      "prs": 1,
+      "contributors": 2,
+      "error": null,
+      "description": null,
+      "created_at": "2025-05-28T01:48:28Z",
+      "updated_at": "2025-05-28T11:02:34Z"
+    },
+    {
+      "name": "policy-pr-hub",
+      "commits": 1,
+      "prs": 17,
+      "contributors": 3,
+      "error": null,
+      "description": "政策プルリク活用ハブ",
+      "created_at": "2025-05-29T04:32:05Z",
+      "updated_at": "2025-06-07T06:42:50Z"
+    },
+    {
+      "name": "knowledge",
+      "commits": 1,
+      "prs": 1,
+      "contributors": 2,
+      "error": null,
+      "description": "知識のストックです",
+      "created_at": "2025-06-02T07:02:43Z",
+      "updated_at": "2025-06-02T07:14:06Z"
+    },
+    {
+      "name": "ai-anno",
+      "commits": 1,
+      "prs": 4,
+      "contributors": 5,
+      "error": null,
+      "description": "2024時点のAIあんのです",
+      "created_at": "2025-06-02T11:32:35Z",
+      "updated_at": "2025-06-07T09:11:40Z"
+    },
+    {
+      "name": "poster-map",
+      "commits": 1,
+      "prs": 2,
+      "contributors": 4,
+      "error": null,
+      "description": "ポスターマップやポスティングマップです！",
+      "created_at": "2025-06-04T11:52:55Z",
+      "updated_at": "2025-06-07T09:33:36Z"
+    },
+    {
+      "name": "action-board-mobile",
+      "commits": 0,
+      "prs": 0,
+      "contributors": 0,
+      "error": null,
+      "description": null,
+      "created_at": "2025-06-05T14:05:54Z",
+      "updated_at": "2025-06-05T14:05:55Z"
+    },
+    {
+      "name": "devin-stat",
+      "commits": 1,
+      "prs": 1,
+      "contributors": 2,
+      "error": null,
+      "description": null,
+      "created_at": "2025-06-07T06:18:00Z",
+      "updated_at": "2025-06-07T07:27:49Z"
+    },
+    {
+      "name": "oss-statistics",
+      "commits": 1,
+      "prs": 0,
+      "contributors": 1,
+      "error": null,
+      "description": null,
+      "created_at": "2025-06-07T16:37:06Z",
+      "updated_at": "2025-06-07T16:37:09Z"
+    }
+  ]
+}
