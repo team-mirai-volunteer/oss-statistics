@@ -6,6 +6,7 @@ GitHub組織の統計情報を収集するスクリプト
 import requests
 import json
 import os
+import re
 from datetime import datetime
 from typing import Dict, List, Any
 
@@ -62,25 +63,52 @@ class GitHubStatsCollector:
             if commits_response.status_code == 200:
                 link_header = commits_response.headers.get('Link', '')
                 if 'last' in link_header:
-                    commits_data = commits_response.json()
-                    stats['commits'] = len(commits_data) if commits_data else 0
+                    last_match = re.search(r'page=(\d+)>; rel="last"', link_header)
+                    if last_match:
+                        stats['commits'] = int(last_match.group(1))
+                    else:
+                        stats['commits'] = 1
                 else:
                     commits_data = commits_response.json()
                     stats['commits'] = len(commits_data) if commits_data else 0
             
             prs_url = f"https://api.github.com/repos/{self.org_name}/{repo_name}/pulls"
-            prs_response = requests.get(prs_url, headers=self.headers, params={'state': 'all', 'per_page': 100})
+            prs_response = requests.get(prs_url, headers=self.headers, params={'state': 'all', 'per_page': 1})
             
+            pr_count = 0
             if prs_response.status_code == 200:
-                prs_data = prs_response.json()
-                stats['prs'] = len(prs_data)
+                link_header = prs_response.headers.get('Link', '')
+                if 'last' in link_header:
+                    last_match = re.search(r'page=(\d+)>; rel="last"', link_header)
+                    if last_match:
+                        pr_count = int(last_match.group(1))
+                else:
+                    prs_data = prs_response.json()
+                    pr_count = len(prs_data) if prs_data else 0
+            
+            issues_url = f"https://api.github.com/repos/{self.org_name}/{repo_name}/issues"
+            issues_response = requests.get(issues_url, headers=self.headers, params={'state': 'all', 'per_page': 1})
+            
+            issue_count = 0
+            if issues_response.status_code == 200:
+                issues_data = issues_response.json()
+                if issues_data:
+                    issue_count = max(issue['number'] for issue in issues_data)
+            
+            stats['prs'] = max(pr_count, issue_count)
             
             contributors_url = f"https://api.github.com/repos/{self.org_name}/{repo_name}/contributors"
-            contributors_response = requests.get(contributors_url, headers=self.headers, params={'per_page': 100})
+            contributors_response = requests.get(contributors_url, headers=self.headers, params={'per_page': 1})
             
             if contributors_response.status_code == 200:
-                contributors_data = contributors_response.json()
-                stats['contributors'] = len(contributors_data)
+                link_header = contributors_response.headers.get('Link', '')
+                if 'last' in link_header:
+                    last_match = re.search(r'page=(\d+)>; rel="last"', link_header)
+                    if last_match:
+                        stats['contributors'] = int(last_match.group(1))
+                else:
+                    contributors_data = contributors_response.json()
+                    stats['contributors'] = len(contributors_data) if contributors_data else 0
                 
         except Exception as e:
             stats['error'] = str(e)
