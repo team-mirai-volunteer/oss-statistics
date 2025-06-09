@@ -1,0 +1,224 @@
+/* OSS統計ダッシュボード スタイル */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #667eea;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.charts-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+}
+
+.repos-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.repos-section h3 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.repo-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s ease;
+}
+
+.repo-card:hover {
+    transform: translateX(5px);
+}
+
+.repo-card h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.repo-description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.repo-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stat-item {
+    background: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    color: #495057;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 0.8em;
+    margin-top: 10px;
+    padding: 5px;
+    background: #f8d7da;
+    border-radius: 5px;
+}
+
+.update-info {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.refresh-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background: #218838;
+}
+
+.no-data {
+    text-align: center;
+    background: white;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.no-data h3 {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.no-data p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .stats-overview {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2.5em;
+    }
+    
+    .repos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+}
