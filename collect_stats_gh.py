@@ -50,7 +50,7 @@ class GitHubStatsCollectorGH:
                 except json.JSONDecodeError:
                     pass
             
-            prs_cmd = ['gh', 'api', f'repos/{self.org_name}/{repo_name}/pulls', '--paginate']
+            prs_cmd = ['gh', 'api', f'repos/{self.org_name}/{repo_name}/pulls?state=all', '--paginate']
             prs_raw = self.run_gh_command(prs_cmd)
             if prs_raw:
                 try:

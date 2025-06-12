@@ -1,22 +1,52 @@
 {
   "organization": "team-mirai-volunteer",
-  "collected_at": "2025-06-12T03:38:14.195953",
+  "collected_at": "2025-06-12T04:08:46.853824",
   "total_repos": 14,
   "repositories": [
     {
+      "name": "oss-statistics",
+      "commits": 6,
+      "prs": 2,
+      "contributors": 2,
+      "error": null,
+      "description": "",
+      "created_at": "2025-06-07T16:37:06Z",
+      "updated_at": "2025-06-12T04:06:08Z"
+    },
+    {
+      "name": "pr-data",
+      "commits": 27,
+      "prs": 3,
+      "contributors": 3,
+      "error": null,
+      "description": "",
+      "created_at": "2025-05-27T14:49:29Z",
+      "updated_at": "2025-06-12T03:49:42Z"
+    },
+    {
       "name": "action-board",
-      "commits": 685,
-      "prs": 5,
+      "commits": 687,
+      "prs": 231,
       "contributors": 20,
       "error": null,
       "description": "政党の政治活動をゲーミフィケーション化するプラットフォーム。レベルアップ、ミッション、ラ ンキング機能でボランティア参加を促進",
       "created_at": "2025-05-10T08:39:38Z",
-      "updated_at": "2025-06-12T03:02:12Z"
+      "updated_at": "2025-06-12T03:48:57Z"
+    },
+    {
+      "name": "devin-stat",
+      "commits": 11,
+      "prs": 2,
+      "contributors": 2,
+      "error": null,
+      "description": "",
+      "created_at": "2025-06-07T06:18:00Z",
+      "updated_at": "2025-06-12T03:44:38Z"
     },
     {
       "name": "pr_analysis",
       "commits": 18,
-      "prs": 0,
+      "prs": 5,
       "contributors": 2,
       "error": null,
       "description": "",
@@ -24,19 +54,9 @@
       "updated_at": "2025-06-12T01:38:53Z"
     },
     {
-      "name": "pr-data",
-      "commits": 26,
-      "prs": 1,
-      "contributors": 3,
-      "error": null,
-      "description": "",
-      "created_at": "2025-05-27T14:49:29Z",
-      "updated_at": "2025-06-11T03:50:50Z"
-    },
-    {
       "name": "policy-pr-hub",
       "commits": 78,
-      "prs": 1,
+      "prs": 22,
       "contributors": 3,
       "error": null,
       "description": "政策プルリク活用ハブ",
@@ -46,7 +66,7 @@
     {
       "name": "ai-anno",
       "commits": 29,
-      "prs": 0,
+      "prs": 5,
       "contributors": 5,
       "error": null,
       "description": "2025年のAIあんのです",
@@ -56,7 +76,7 @@
     {
       "name": "fact-checker",
       "commits": 78,
-      "prs": 6,
+      "prs": 23,
       "contributors": 11,
       "error": null,
       "description": "Twitter/X投稿をリアルタイム監視し、AI powered ファクトチェックで政党関連の誤情報を自動検出‧ Slack通知するシステム",
@@ -74,34 +94,14 @@
       "updated_at": "2025-06-10T03:28:58Z"
     },
     {
-      "name": "oss-statistics",
-      "commits": 4,
-      "prs": 0,
-      "contributors": 2,
-      "error": null,
-      "description": "",
-      "created_at": "2025-06-07T16:37:06Z",
-      "updated_at": "2025-06-09T08:10:33Z"
-    },
-    {
       "name": "poster-map",
       "commits": 29,
-      "prs": 0,
+      "prs": 2,
       "contributors": 4,
       "error": null,
       "description": "選挙ポスター掲示板管理とポスティング地域管理の統合システム。 2024年東京都知事選実績をベースに、地図上での配布エリア描画・リアルタイム保存機能を追加した包括的な選挙運営支援ツール",
       "created_at": "2025-06-04T11:52:55Z",
       "updated_at": "2025-06-11T01:49:19Z"
-    },
-    {
-      "name": "devin-stat",
-      "commits": 9,
-      "prs": 0,
-      "contributors": 2,
-      "error": null,
-      "description": "",
-      "created_at": "2025-06-07T06:18:00Z",
-      "updated_at": "2025-06-07T07:27:49Z"
     },
     {
       "name": "action-board-mobile",
@@ -116,7 +116,7 @@
     {
       "name": "knowledge",
       "commits": 4,
-      "prs": 0,
+      "prs": 1,
       "contributors": 2,
       "error": null,
       "description": "知識のストックです",
@@ -126,7 +126,7 @@
     {
       "name": "youtube",
       "commits": 4,
-      "prs": 0,
+      "prs": 1,
       "contributors": 2,
       "error": null,
       "description": "",
@@ -136,7 +136,7 @@
     {
       "name": "project_template",
       "commits": 4,
-      "prs": 0,
+      "prs": 1,
       "contributors": 2,
       "error": null,
       "description": "新規プロジェクトを作る際の参考用です",
