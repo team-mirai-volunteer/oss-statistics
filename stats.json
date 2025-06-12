@@ -1,107 +1,107 @@
 {
   "organization": "team-mirai-volunteer",
-  "collected_at": "2025-06-07T16:55:07.471492",
-  "total_repos": 13,
+  "collected_at": "2025-06-12T03:38:14.195953",
+  "total_repos": 14,
   "repositories": [
     {
       "name": "action-board",
-      "commits": 574,
-      "prs": 338,
-      "contributors": 19,
+      "commits": 685,
+      "prs": 5,
+      "contributors": 20,
       "error": null,
-      "description": "ゲーミフィケーション",
+      "description": "政党の政治活動をゲーミフィケーション化するプラットフォーム。レベルアップ、ミッション、ラ ンキング機能でボランティア参加を促進",
       "created_at": "2025-05-10T08:39:38Z",
-      "updated_at": "2025-06-07T14:50:33Z"
-    },
-    {
-      "name": "fact-checker",
-      "commits": 63,
-      "prs": 38,
-      "contributors": 9,
-      "error": null,
-      "description": null,
-      "created_at": "2025-05-23T06:47:29Z",
-      "updated_at": "2025-06-07T14:17:02Z"
-    },
-    {
-      "name": "project_template",
-      "commits": 4,
-      "prs": 1,
-      "contributors": 0,
-      "error": null,
-      "description": "新規プロジェクトを作る際の参考用です",
-      "created_at": "2025-05-27T09:34:29Z",
-      "updated_at": "2025-05-27T12:36:46Z"
+      "updated_at": "2025-06-12T03:02:12Z"
     },
     {
       "name": "pr_analysis",
-      "commits": 0,
+      "commits": 18,
       "prs": 0,
-      "contributors": 0,
+      "contributors": 2,
       "error": null,
-      "description": null,
+      "description": "",
       "created_at": "2025-05-27T14:48:07Z",
-      "updated_at": "2025-05-28T11:01:30Z"
+      "updated_at": "2025-06-12T01:38:53Z"
     },
     {
       "name": "pr-data",
-      "commits": 0,
-      "prs": 0,
-      "contributors": 0,
+      "commits": 26,
+      "prs": 1,
+      "contributors": 3,
       "error": null,
-      "description": null,
+      "description": "",
       "created_at": "2025-05-27T14:49:29Z",
-      "updated_at": "2025-06-07T03:44:38Z"
-    },
-    {
-      "name": "youtube",
-      "commits": 0,
-      "prs": 0,
-      "contributors": 0,
-      "error": null,
-      "description": null,
-      "created_at": "2025-05-28T01:48:28Z",
-      "updated_at": "2025-05-28T11:02:34Z"
+      "updated_at": "2025-06-11T03:50:50Z"
     },
     {
       "name": "policy-pr-hub",
-      "commits": 0,
-      "prs": 0,
-      "contributors": 0,
+      "commits": 78,
+      "prs": 1,
+      "contributors": 3,
       "error": null,
       "description": "政策プルリク活用ハブ",
       "created_at": "2025-05-29T04:32:05Z",
-      "updated_at": "2025-06-07T06:42:50Z"
-    },
-    {
-      "name": "knowledge",
-      "commits": 0,
-      "prs": 0,
-      "contributors": 0,
-      "error": null,
-      "description": "知識のストックです",
-      "created_at": "2025-06-02T07:02:43Z",
-      "updated_at": "2025-06-02T07:14:06Z"
+      "updated_at": "2025-06-11T14:22:55Z"
     },
     {
       "name": "ai-anno",
+      "commits": 29,
+      "prs": 0,
+      "contributors": 5,
+      "error": null,
+      "description": "2025年のAIあんのです",
+      "created_at": "2025-06-02T11:32:35Z",
+      "updated_at": "2025-06-10T03:21:03Z"
+    },
+    {
+      "name": "fact-checker",
+      "commits": 78,
+      "prs": 6,
+      "contributors": 11,
+      "error": null,
+      "description": "Twitter/X投稿をリアルタイム監視し、AI powered ファクトチェックで政党関連の誤情報を自動検出‧ Slack通知するシステム",
+      "created_at": "2025-05-23T06:47:29Z",
+      "updated_at": "2025-06-11T13:17:31Z"
+    },
+    {
+      "name": "engineering-hub",
       "commits": 0,
       "prs": 0,
       "contributors": 0,
       "error": null,
-      "description": "2024時点のAIあんのです",
-      "created_at": "2025-06-02T11:32:35Z",
-      "updated_at": "2025-06-07T09:11:40Z"
+      "description": "開発横串イシュー管理用",
+      "created_at": "2025-06-10T03:28:58Z",
+      "updated_at": "2025-06-10T03:28:58Z"
+    },
+    {
+      "name": "oss-statistics",
+      "commits": 4,
+      "prs": 0,
+      "contributors": 2,
+      "error": null,
+      "description": "",
+      "created_at": "2025-06-07T16:37:06Z",
+      "updated_at": "2025-06-09T08:10:33Z"
     },
     {
       "name": "poster-map",
-      "commits": 0,
+      "commits": 29,
       "prs": 0,
-      "contributors": 0,
+      "contributors": 4,
       "error": null,
-      "description": "ポスターマップやポスティングマップです！",
+      "description": "選挙ポスター掲示板管理とポスティング地域管理の統合システム。 2024年東京都知事選実績をベースに、地図上での配布エリア描画・リアルタイム保存機能を追加した包括的な選挙運営支援ツール",
       "created_at": "2025-06-04T11:52:55Z",
-      "updated_at": "2025-06-07T09:33:36Z"
+      "updated_at": "2025-06-11T01:49:19Z"
+    },
+    {
+      "name": "devin-stat",
+      "commits": 9,
+      "prs": 0,
+      "contributors": 2,
+      "error": null,
+      "description": "",
+      "created_at": "2025-06-07T06:18:00Z",
+      "updated_at": "2025-06-07T07:27:49Z"
     },
     {
       "name": "action-board-mobile",
@@ -109,29 +109,39 @@
       "prs": 0,
       "contributors": 0,
       "error": null,
-      "description": null,
+      "description": "",
       "created_at": "2025-06-05T14:05:54Z",
       "updated_at": "2025-06-05T14:05:55Z"
     },
     {
-      "name": "devin-stat",
-      "commits": 0,
+      "name": "knowledge",
+      "commits": 4,
       "prs": 0,
-      "contributors": 0,
+      "contributors": 2,
       "error": null,
-      "description": null,
-      "created_at": "2025-06-07T06:18:00Z",
-      "updated_at": "2025-06-07T07:27:49Z"
+      "description": "知識のストックです",
+      "created_at": "2025-06-02T07:02:43Z",
+      "updated_at": "2025-06-02T07:14:06Z"
     },
     {
-      "name": "oss-statistics",
-      "commits": 0,
+      "name": "youtube",
+      "commits": 4,
       "prs": 0,
-      "contributors": 0,
+      "contributors": 2,
       "error": null,
-      "description": null,
-      "created_at": "2025-06-07T16:37:06Z",
-      "updated_at": "2025-06-07T16:37:09Z"
+      "description": "",
+      "created_at": "2025-05-28T01:48:28Z",
+      "updated_at": "2025-05-28T11:02:34Z"
+    },
+    {
+      "name": "project_template",
+      "commits": 4,
+      "prs": 0,
+      "contributors": 2,
+      "error": null,
+      "description": "新規プロジェクトを作る際の参考用です",
+      "created_at": "2025-05-27T09:34:29Z",
+      "updated_at": "2025-05-27T12:36:46Z"
     }
   ]
 }
